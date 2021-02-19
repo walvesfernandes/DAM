@@ -24,8 +24,7 @@ public class Cuenta {
     }
 
     public void setNumeroCuenta(String s, Byte nivel) {
-    //Solo deja realizar el cambio a quién tenga
-    //un determinado nivel de acceso
+
         if (nivel == 1) {
             numeroCuenta = s;
         }

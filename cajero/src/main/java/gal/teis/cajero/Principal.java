@@ -21,7 +21,7 @@ public class Principal {
      */
     public static void main(String[] args) {
         
-        //CREO UN ARRAYLIST CON LAS OPCIONES DEL MENU
+        //Creo un array list para las opciones del menu
        ArrayList<String> menuop = new ArrayList<>();
         menuop.add("Hacer ingreso");
         menuop.add("Resta");
@@ -34,8 +34,10 @@ public class Principal {
        
        boolean continua=true;
         
+       //Creamos un menu con las opciones correspondientes(menuop)
        Menu minu= new Menu(menuop);
        
+       //Creo una nueva cuenta
        Cuenta cliente= new Cuenta();
        
  
@@ -46,10 +48,13 @@ public class Principal {
             continua=true;
             minu.printMenu();
             Scanner sc= new Scanner(System.in);
+            
+            //Pido los datos por teclado y guardo en la variable opi
             minu.rango(opi=sc.nextByte());
             
        switch(opi){
            
+           //Hacer ingreso
            case 1 -> { 
                System.out.println("Que cantidad quieres ingresar?");
                dinero=sc.nextFloat();
@@ -57,6 +62,7 @@ public class Principal {
                System.out.println("\nHas ingresado: "+(int)dinero+"$$$\n\n");
                continua=false;
             }
+           //Hacer retirada 
            case 2 -> {
                System.out.println("Que cantidad quieres retirar?");
                dinero=sc.nextFloat();
@@ -64,6 +70,7 @@ public class Principal {
                System.out.println("\nHas retirado: "+(int)dinero+"$$$\n\n");
                continua=false;
             }
+           //Ver saldo 
            case 3 -> {
                System.out.println("\n-Saldo actual: "+cliente.getSaldo()+"$$$\n\n");
                continua=false;
