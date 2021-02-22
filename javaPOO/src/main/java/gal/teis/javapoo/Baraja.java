@@ -21,12 +21,12 @@ public class Baraja {
     
     public void cartaMonton(){};
     
-    public int cartasDisponibles(){};
-    
-    
-    public Carta siguienteCarta(){};
-    
-    public Carta[] darCarta(){};
+//    public int cartasDisponibles(){};
+//    
+//    
+//    public Carta siguienteCarta(){};
+//    
+//    public Carta[] darCarta(){};
     
     
 }
